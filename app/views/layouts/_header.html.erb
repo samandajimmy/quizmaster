@@ -3,9 +3,17 @@
     <%= link_to "quizmaster", root_path, id: "logo" %>
     <nav>
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Home",   root_path %></li>
         <% if logged_in? %>
-          <li><%= link_to "Users", '#' %></li>
+          <li><%= link_to "Hello, " + @current_user.name, '#' %></li>
+          <% if @current_user.user_type == 'student' %>
+            <li>
+              <%= link_to "Answer the question", questions_path %>
+            </li>
+          <% else %>
+            <li>
+              <%= link_to "Manage questions", questions_path %>
+            </li>
+          <% end %>
           <li>
             <%= link_to "Log out", logout_path, method: "delete" %>
           </li>

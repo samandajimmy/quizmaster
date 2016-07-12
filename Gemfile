@@ -32,6 +32,11 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'bootstrap-sass', '3.3.6'
 gem 'bcrypt', '3.1.11'
+gem 'simple_form'
+gem 'bootstrap-wysihtml5-rails', github: 'nerian/bootstrap-wysihtml5-rails'
+gem 'will_paginate',           '3.1.0'
+gem 'bootstrap-will_paginate', '0.0.10'
+gem 'htmlentities', '~> 4.3', '>= 4.3.4'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

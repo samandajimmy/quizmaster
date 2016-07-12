@@ -1,0 +1,23 @@
+<% provide(:title, 'Answer The Question') %>
+<h1>Answer The Question</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= simple_form_for(@question) do |f| %>
+      <%= f.hidden_field :user_id, value: @current_user.id %>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control', readonly: true %>
+
+      <%= f.label :content %>
+      <%= f.text_area :content, value: @question.content, class: 'form-control', rows: '10', readonly: true %>
+    <% end %>
+    <%= simple_form_for(@answer, url: answer_it_path) do |f| %>
+      <%= f.hidden_field :user_id, value: @current_user.id %>
+      <%= f.hidden_field :question_id, value: @question.id %>
+      <%= f.label "Your Answer" %>
+      <%= f.text_field :value, class: 'form-control' %>
+
+      <%= f.submit "Submit", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

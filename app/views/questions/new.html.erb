@@ -1,0 +1,18 @@
+<% provide(:title, 'New Question') %>
+<h1>Create new question</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= simple_form_for(@question, url: questions_path) do |f| %>
+      <%= f.hidden_field :user_id, value: @current_user.id %>
+      <%= f.label :title %>
+      <%= f.text_field :title, class: 'form-control' %>
+
+      <%= f.input :content, as: :wysihtml5, class: 'form-control' %>
+
+      <%= f.input :correct_answer, as: :wysihtml5, class: 'form-control' %>
+
+      <%= f.submit "Create question", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
