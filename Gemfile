@@ -37,6 +37,11 @@ gem 'bootstrap-wysihtml5-rails', github: 'nerian/bootstrap-wysihtml5-rails'
 gem 'will_paginate',           '3.1.0'
 gem 'bootstrap-will_paginate', '0.0.10'
 gem 'htmlentities', '~> 4.3', '>= 4.3.4'
+gem "rspec"
+gem 'rspec-rails'
+gem 'faker', '~> 1.6', '>= 1.6.5'
+gem 'factory_girl_rails', '~> 4.7'
+gem 'rails-controller-testing', '~> 0.1.1'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

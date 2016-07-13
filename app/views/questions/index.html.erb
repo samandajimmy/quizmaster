@@ -31,7 +31,6 @@
               <% if !question.answers.empty? %>
                 <%= link_to 'Answer it!', answer_it_path(question) %>
               <% else %>
-                <%= question.answers.first[:value] %>
                 Answered
               <% end %>
             </td>
