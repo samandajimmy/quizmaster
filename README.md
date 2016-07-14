@@ -3,22 +3,21 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+step to install the app
 
-* Ruby version
+1. clone the repo
+2. run bundle install
+3. run rake db:create
+4. run rake db:migrate
+5. run rake db:seed (this rake task only to add quizmaster user to create a new questions)
 
-* System dependencies
+things to know about the app
+quizmaster login
+email: admin@example.com
+pass: 123123123
 
-* Configuration
+you can add new question with this user
 
-* Database creation
+than you need to signup and login as student user to answer the questions that has been created by quizmaster user
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+hope this will help!

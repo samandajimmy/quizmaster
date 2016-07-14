@@ -29,9 +29,9 @@
           <% else %>
             <td>
               <% if !question.answers.empty? %>
-                <%= link_to 'Answer it!', answer_it_path(question) %>
-              <% else %>
                 Answered
+              <% else %>
+                <%= link_to 'Answer it!', answer_it_path(question) %>
               <% end %>
             </td>
           <% end %>
